@@ -1,7 +1,7 @@
 server {
         listen 80;
         listen [::]:80;
-        root /var/www/3204-simple-web-server;
+        root /usr/share/nginx/3204-simple-web-server;
         index index.html index.htm index.nginx-debian.html;
         server_name 3204-simple-web-server.com www.3204-simple-web-server.com;
 
