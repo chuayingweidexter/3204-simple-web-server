@@ -1,13 +1,6 @@
-/*
-
-inspiration: 
-https://dribbble.com/shots/2292415-Daily-UI-001-Day-001-Sign-Up
-
-*/
-
-let form = document.querySelecter('form');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  return false;
+var connection = mysql.createConnection({
+	host     : '172.18.0.24',
+	user     : 'root',
+	password : 'abc123',
+	database : '3204_db'
 });
