@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("172.18.0.24","root","abc123","3204_db");
+$con = mysqli_connect("172.18.0.2","root","abc123","3204_db");
 
 // Check connection
 if (mysqli_connect_errno())
