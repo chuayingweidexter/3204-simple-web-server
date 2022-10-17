@@ -16,7 +16,7 @@ include('session.php');
     $sql ="SELECT * FROM [SSH Credentials] WHERE Accounts_User_id LIKE '%$session_id%'";
 		print "<p> $sql </p>";
 		print "<hr>";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($con, $sql);
 		$queryResult = mysqli_num_rows($result);
     if($queryResult > 0){
         while($row = mysqli_fetch_assoc($result)){
