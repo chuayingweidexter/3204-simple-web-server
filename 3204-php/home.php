@@ -13,7 +13,7 @@ include('session.php');
     <center><h3>Welcome</h3></center>
 	 <div class="reminder">
     <?php
-    $sql ="SELECT * FROM [SSH Credentials] WHERE Accounts_User_id LIKE '%$search%'";
+    $sql ="SELECT * FROM [SSH Credentials] WHERE Accounts_User_id LIKE '%$session_id%'";
 		print "<p> $sql </p>";
 		print "<hr>";
 		$result = mysqli_query($conn, $sql);
