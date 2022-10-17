@@ -1,9 +1,14 @@
 <?php
-$con = mysqli_connect("172.16.0.2","root","abc123","3204_db", "6603");
 
-// Check connection
-if ($dblink->connect_error) {
-    die('Connect Error (' . $dblink->connect_errno . ') '. $dblink->connect_error);
+$host = "xxx.xxx.xxx.xxx:3333";    
+$port = 3306;
+$user = "user";
+$password = "password";
+$dbname = "db01";
+
+$con = new mysqli($host, $user, $password, $dbname, $port);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
-echo $dblink->host_info;
 ?>
