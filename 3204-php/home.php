@@ -10,15 +10,15 @@ include('session.php');
 </head>
 <body>
 <div class="form-wrapper"> 
-    <center><h3>Welcome</h3></center>
+    <center><h3>Hello <?php$session_id?></h3></center>
 	 <div class="reminder">
     <hr>
    <table border="3" cellspacing="0" cellpadding="10">
         <tbody>
            <tr>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Quantity</th>
+              <th>IP</th>
+              <th>Username</th>
+              <th>Password</th>
            </tr>
     <?php
     $sql ="SELECT * FROM `SSH Credentials` WHERE Accounts_User_id='$session_id'";
