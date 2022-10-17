@@ -26,6 +26,7 @@ include('session.php');
         }
       }
     ?>
+    <hr>
     <p><a href="logout.php">Log out</a></p>
   </div>
 </div>
