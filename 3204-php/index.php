@@ -34,7 +34,7 @@
 			
 			if ($num_row > 0) 
 				{			
-					$_SESSION['user_id']=$row['user_id'];
+					$_SESSION['User_id']=$row['user_id'];
 					header('location:home.php');
 					
 				}
