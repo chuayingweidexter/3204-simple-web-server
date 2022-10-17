@@ -12,10 +12,16 @@ include('session.php');
 <div class="form-wrapper"> 
     <center><h3>Welcome</h3></center>
 	 <div class="reminder">
+    <hr>
+   <table border="3" cellspacing="0" cellpadding="10">
+        <tbody>
+           <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Quantity</th>
+           </tr>
     <?php
     $sql ="SELECT * FROM `SSH Credentials` WHERE Accounts_User_id='$session_id'";
-		print "<p> $sql </p>";
-		print "<hr>";
 		$result = mysqli_query($con, $sql);
 		$queryResult = mysqli_num_rows($result);
     if($queryResult > 0){
@@ -26,6 +32,7 @@ include('session.php');
         }
       }
     ?>
+    </table>
     <hr>
     <p><a href="logout.php">Log out</a></p>
   </div>
