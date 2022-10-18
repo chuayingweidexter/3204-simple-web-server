@@ -33,9 +33,19 @@
 			$num_row 	= mysqli_num_rows($query);
 			
 			if ($num_row > 0) 
-				{			
+				{				
 					$_SESSION['user_id']=$username;
-					header('location:home.php');
+					$url = "home.php"
+					$query = parse_url($url, PHP_URL_QUERY);
+					// Returns a string if the URL has parameters or NULL if not
+					if ($query) {
+					    $url .= "&username=";
+					    $url .= $username;
+					} else {
+					    $url .= "?username=";
+					    $url .= $username;
+					}
+					header("location:'$url'");
 					
 				}
 			else
