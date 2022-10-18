@@ -35,17 +35,7 @@
 			if ($num_row > 0) 
 				{				
 					$_SESSION['user_id']=$username;
-					$url = "home.php"
-					$query = parse_url($url, PHP_URL_QUERY);
-					// Returns a string if the URL has parameters or NULL if not
-					if ($query) {
-					    $url .= "&username=";
-					    $url .= $username;
-					} else {
-					    $url .= "?username=";
-					    $url .= $username;
-					}
-					header("location:'$url'");
+					header("location:home.php?username='$username'");
 					
 				}
 			else
