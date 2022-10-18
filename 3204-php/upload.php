@@ -13,6 +13,8 @@
 </html>
 
 <?php
+<?php session_start(); ?>
+<?php include('dbcon.php'); ?>
 $target_path = "uploads/";
 //Here we set the target path that will save the file in to.
 $target_path = $target_path . basename($_FILES['uploadedfile']['name']);
