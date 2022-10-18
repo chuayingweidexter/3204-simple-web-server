@@ -39,9 +39,11 @@
 					$query = parse_url($url, PHP_URL_QUERY);
 					// Returns a string if the URL has parameters or NULL if not
 					if ($query) {
-					    $url .= "&username="$username;
+					    $url .= "&username=";
+					    $url .= $username;
 					} else {
-					    $url .= "?username=1"$username;
+					    $url .= "?username=";
+					    $url .= $username;
 					}
 					header("location:'$url'");
 				}
