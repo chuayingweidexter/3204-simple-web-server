@@ -21,7 +21,8 @@ include('session.php');
               <th>Password</th>
            </tr>
     <?php
-    $sql ="SELECT * FROM `SSH Credentials` WHERE Accounts_User_id='$session_id'";
+    $username = $_GET['username']
+    $sql ="SELECT * FROM `SSH Credentials` WHERE Accounts_User_id='$username'";
 		$result = mysqli_query($con, $sql);
 		$queryResult = mysqli_num_rows($result);
     if($queryResult > 0){
